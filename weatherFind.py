@@ -55,9 +55,12 @@ def format_email(body):
 	mailProcess.sendmail(fromaddr, toaddrs, Message)
 	mailProcess.quit()	
 
-#Main 
-current_weather = find_weather_information()
-body = current_weather
-
-#Call format_body to send email
-format_email(body)
+#Main
+def main():
+	current_weather = find_weather_information()
+	body = current_weather
+	#Call format_body to send email
+	format_email(body)
+	
+if __name__ == '__main__':
+    main()
